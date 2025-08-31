@@ -1,0 +1,80 @@
+<svg width="220" height="180" viewBox="0 0 220 180" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Main logo composition -->
+  <g transform="translate(110,90)">
+
+    <!-- Primary geometric form - inspired by "Z" shape -->
+    <path d="M-70 -50 L50 -50 L-20 20 L70 20 L70 40 L-50 40 L20 -30 L-70 -30 Z"
+          fill="#000000"/>
+
+    <!-- Secondary layer - creates depth -->
+    <path d="M-65 -45 L45 -45 L-15 15 L65 15 L65 35 L-45 35 L25 -25 L-65 -25 Z"
+          fill="#ffffff"/>
+
+    <!-- Inner dynamic cuts -->
+    <path d="M-40 -25 L20 -25 L-5 5 L40 5 L40 15 L-20 15 L15 -15 L-40 -15 Z"
+          fill="#000000"/>
+
+    <!-- Asymmetric accent elements -->
+    <rect x="-80" y="-35" width="4" height="30" fill="#000000" transform="rotate(-25)"/>
+    <rect x="65" y="0" width="3" height="25" fill="#000000" transform="rotate(35)"/>
+    <rect x="-15" y="-60" width="2" height="20" fill="#000000" transform="rotate(15)"/>
+
+    <!-- Sharp angular details -->
+    <polygon points="-75,-40 -65,-40 -70,-25" fill="#000000"/>
+    <polygon points="75,25 85,25 80,40" fill="#000000"/>
+    <polygon points="0,-55 10,-55 5,-40" fill="#000000"/>
+
+    <!-- Lightning-like energy lines -->
+    <path d="M-50 -15 L-35 -15 L-45 0 L-30 0 L-40 15"
+          stroke="#000000"
+          stroke-width="2"
+          fill="none"
+          stroke-linejoin="round"/>
+
+    <path d="M30 -15 L45 -15 L35 0 L50 0 L40 15"
+          stroke="#000000"
+          stroke-width="2"
+          fill="none"
+          stroke-linejoin="round"/>
+
+    <!-- Central power indicator -->
+    <circle cx="0" cy="-5" r="3" fill="#000000"/>
+
+  </g>
+
+  <!-- Main brand name - ZYRA -->
+  <text x="110" y="40"
+        font-family="Arial Black, sans-serif"
+        font-size="32"
+        font-weight="900"
+        text-anchor="middle"
+        fill="#000000"
+        letter-spacing="3px">ZYRA</text>
+
+
+
+  <!-- Modern corner brackets -->
+  <g stroke="#000000" stroke-width="2" fill="none">
+    <path d="M15 15 L15 25 L25 25"/>
+    <path d="M205 15 L205 25 L195 25"/>
+    <path d="M15 165 L15 155 L25 155"/>
+    <path d="M205 165 L205 155 L195 155"/>
+  </g>
+
+  <!-- Dynamic side elements -->
+  <rect x="10" y="70" width="8" height="2" fill="#000000"/>
+  <rect x="10" y="80" width="12" height="2" fill="#000000"/>
+  <rect x="10" y="90" width="6" height="2" fill="#000000"/>
+
+  <rect x="202" y="70" width="8" height="2" fill="#000000"/>
+  <rect x="198" y="80" width="12" height="2" fill="#000000"/>
+  <rect x="204" y="90" width="6" height="2" fill="#000000"/>
+
+  <!-- Subtle tech pattern -->
+  <circle cx="25" cy="45" r="1" fill="#000000" opacity="0.3"/>
+  <circle cx="195" cy="45" r="1" fill="#000000" opacity="0.3"/>
+  <circle cx="25" cy="135" r="1" fill="#000000" opacity="0.3"/>
+  <circle cx="195" cy="135" r="1" fill="#000000" opacity="0.3"/>
+
+</svg>

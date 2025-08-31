@@ -1,0 +1,20 @@
+[package]
+name = "zyra-ebpf"
+version = "0.1.0"
+edition.workspace = true
+
+[dependencies]
+zyra-common = { path = "../zyra-common" }
+
+aya-ebpf = { workspace = true }
+aya-log-ebpf = { workspace = true }
+network-types = "0.1.0"
+
+[build-dependencies]
+which = { workspace = true }
+
+[[bin]]
+name = "zyra"
+path = "src/main.rs"
+
+
