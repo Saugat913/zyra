@@ -1,26 +1,24 @@
 use crate::flow_direction::FlowDirection;
-use crate::packet_type::PacketType;
 
-/// Maximum number of bytes used by an address field in the current IPv4 rule ABI.
-pub const ANY_U16: u16 = 0;
-pub const ANY_U8: u8 = 0;
+pub const ANY_PORT: u16 = 0;
+pub const ANY_PROTOCOL: u8 = 0;
 
-#[repr(C)]
+#[repr(u8)]
 #[derive(Clone, Copy, Debug, Hash, Eq, PartialEq)]
 pub enum RuleAction {
-    ALLOW,
-    BLOCK,
+    ALLOW = 0,
+    BLOCK = 1,
 }
 
 #[repr(C)]
 #[derive(Clone, Copy, Debug, Hash, Eq, PartialEq)]
 pub struct RuleKey {
-    /// Stable rule selector. Zero means wildcard for the current matcher.
+    /// IPv4 address in network byte order. Zero means any IPv4 address.
     pub ip: u32,
     /// Zero means any port.
     pub port: u16,
-    /// Packet type discriminant. Zero means any protocol.
-    pub packet_type: PacketType,
+    /// IANA IP protocol number. Zero means any protocol.
+    pub protocol: u8,
     pub direction: FlowDirection,
 }
 
@@ -41,14 +39,14 @@ impl Rule {
         priority: u16,
         ip: u32,
         port: u16,
-        packet_type: PacketType,
+        protocol: u8,
         direction: FlowDirection,
         action: RuleAction,
     ) -> Self {
         Self {
             id,
             priority,
-            key: RuleKey { ip, port, packet_type, direction },
+            key: RuleKey { ip, port, protocol, direction },
             action,
         }
     }
